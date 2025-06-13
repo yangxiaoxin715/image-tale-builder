@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Sparkles, Heart, User } from 'lucide-react';
 import { FormData } from '../pages/Index';
-import FeatureCard from './FeatureCard';
 
 interface StoryFormProps {
   onSubmit: (data: FormData) => void;
@@ -192,25 +191,6 @@ const StoryForm: React.FC<StoryFormProps> = ({ onSubmit, initialData }) => {
             开始生成我的专属绘本
           </button>
         </form>
-
-        {/* 特色功能展示 */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <FeatureCard
-            icon={<User className="w-8 h-8 text-purple-500" />}
-            title="完全自定义角色"
-            description="从零创建独特主角"
-          />
-          <FeatureCard
-            icon={<BookOpen className="w-8 h-8 text-sky-500" />}
-            title="纯图画绘本"
-            description="专注视觉故事体验"
-          />
-          <FeatureCard
-            icon={<Heart className="w-8 h-8 text-pink-500" />}
-            title="温暖可爱风格"
-            description="适合全年龄段阅读"
-          />
-        </div>
       </div>
     </div>
   );
